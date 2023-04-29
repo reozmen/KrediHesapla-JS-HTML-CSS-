@@ -15,15 +15,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   </head>
   <body>
-    <h1 class="title">KREDİ BANKASI</h1>
+    <h1 class="title">🏦 KREDİ BANKASI 🏦</h1>
     <form action="#" id="formKredi" class="formKredi">
       <label for="txtKrediTutari">Çekilecek Kredi Tutarını Giriniz:</label>
 
-      <input type="text" name="" id="cekilecekKredi" required />
+      <input
+        type="text"
+        name=""
+        id="cekilecekKredi"
+        placeholder="Kredi Tutarını Giriniz.."
+        required
+      />
       <label for="faizOrani">Aylık Faiz Oranını Giriniz (%):</label>
       <input
         id="faizOrani"
-        placeholder="Aylık Faiz Oranını Giriniz(%).."
+        placeholder="Aylık Faiz Oranını Giriniz (%).."
         required
       />
       <label for="KKDF">KKDF Oranını : (Farklı ise değiştiriniz..)</label>
@@ -31,7 +37,12 @@
       <label for="BSMV">BSMV Oranını : (Farklı ise değiştiriniz..)</label>
       <input id="BSMV" value="0.10" />
       <label for="vade">Vade Giriniz(Ay):</label>
-      <input type="number" id="vade" required />
+      <input
+        type="number"
+        id="vade"
+        placeholder="Kredi Vadesini Ay Olarak Giriniz.."
+        required
+      />
       <input
         type="button"
         value="Kredi Geri Ödeme Şartlarını Hesapla"
