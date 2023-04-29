@@ -51,7 +51,7 @@ function krediHesapla() {
       </tr>
       <tr>
       <td>Aylık Faiz Oranı</td>
-      <td>${faizOrani * 100} %</td>
+      <td>${(faizOrani * 100).toFixed(2)} %</td>
       </tr>
       <tr>
       <td>Geri Ödeme Toplamı</td>
