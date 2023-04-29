@@ -13,20 +13,19 @@
     <form action="#" id="formKredi">
       <label for="txtKrediTutari">Çekilecek kredi tutarını giriniz:</label>
 
-      <input type="text" name="" id="txtKrediTutari" />
-      <label for="faizOrani">Faiz Oranını giriniz:</label>
+      <input type="text" name="" id="txtKrediTutari" required />
+      <label for="faizOrani">Aylık Faiz Oranını giriniz (%):</label>
       <input
-        type="number"
         id="faizOrani"
-        placeholder="Faiz Oranını Giriniz.."
+        placeholder="Aylık Faiz Oranını Giriniz(%).."
+        required
       />
-      <label for="listeVade">Vade seçiniz:</label>
-      <select name="" id="listeVade">
-        <option value="12">12 ay</option>
-        <option value="24">24 ay</option>
-        <option value="36">36 ay</option>
-        <option value="48">48 ay</option>
-      </select>
+      <label for="KKDF">KKDF Oranını : (Farklı ise değiştiriniz..)</label>
+      <input id="KKDF" value="0.15" />
+      <label for="BSMV">BSMV Oranını : (Farklı ise değiştiriniz..)</label>
+      <input id="BSMV" value="0.10" />
+      <label for="vade">Vade Giriniz(Ay):</label>
+      <input type="number" id="vade" required />
       <input
         type="button"
         value="Kredi Geri Ödeme Şartlarını Hesapla"

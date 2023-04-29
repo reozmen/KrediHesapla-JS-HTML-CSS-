@@ -4,30 +4,23 @@ function krediHesapla() {
 
   cekilecekTutar = +document.getElementById("txtKrediTutari").value;
 
-  faizOrani = +document.getElementById("faizOrani").value;
-  let liste = document.getElementById("listeVade");
-  vadeSayisi = liste.options[liste.selectedIndex].value;
+  faizOrani = +document.getElementById("faizOrani").value / 100;
+  let vade = +document.getElementById("vade").value;
+  let KKDF_orani = parseFloat(document.getElementById("KKDF").value);
+  let BSMV_orani = parseFloat(document.getElementById("BSMV").value);
 
+  console.log(vade);
   console.log(faizOrani);
-  if (vadeSayisi == 12) {
-    odenecekToplamTutar =
-      12 * ((cekilecekTutar * faizOrani) / (1 - 1 / (1 + faizOrani) ** 12));
-  } else if (vadeSayisi == 24) {
-    odenecekToplamTutar =
-      24 * ((cekilecekTutar * faizOrani) / (1 - 1 / (1 + faizOrani) ** 12));
-  } else if (vadeSayisi == 36) {
-    odenecekToplamTutar =
-      36 * ((cekilecekTutar * faizOrani) / (1 - 1 / (1 + faizOrani) ** 12));
-  } else if (vadeSayisi == 48) {
-    odenecekToplamTutar =
-      48 * ((cekilecekTutar * faizOrani) / (1 - 1 / (1 + faizOrani) ** 12));
-  }
+  console.log(KKDF_orani);
+  console.log(BSMV_orani);
+  odenecekToplamTutar =
+    vade * ((cekilecekTutar * faizOrani) / (1 - 1 / (1 + faizOrani) ** vade));
 
-  KKDF = (odenecekToplamTutar - cekilecekTutar) * 0.15;
-  BSMV = (odenecekToplamTutar - cekilecekTutar) * 0.1;
+  KKDF = (odenecekToplamTutar - cekilecekTutar) * KKDF_orani;
+  BSMV = (odenecekToplamTutar - cekilecekTutar) * BSMV_orani;
   vergiliToplamTutar = odenecekToplamTutar + KKDF + BSMV;
 
-  aylikTaksit = vergiliToplamTutar / vadeSayisi;
+  aylikTaksit = vergiliToplamTutar / vade;
 
   document.querySelector("#sonuc").innerHTML =
     "Geri ödeme toplamı: " +
