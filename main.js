@@ -4,10 +4,15 @@ function krediHesapla() {
 
   cekilecekTutar = +document.getElementById("txtKrediTutari").value;
 
-  faizOrani = +document.getElementById("faizOrani").value / 100;
+  faizOrani =
+    +document.getElementById("faizOrani").value.replace(",", ".") / 100;
   let vade = +document.getElementById("vade").value;
-  let KKDF_orani = parseFloat(document.getElementById("KKDF").value);
-  let BSMV_orani = parseFloat(document.getElementById("BSMV").value);
+  let KKDF_orani = parseFloat(
+    document.getElementById("KKDF").value.replace(",", ".")
+  );
+  let BSMV_orani = parseFloat(
+    document.getElementById("BSMV").value.replace(",", ".")
+  );
 
   console.log(vade);
   console.log(faizOrani);
