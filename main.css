@@ -1,27 +1,28 @@
-form{
-    display: grid;
-    grid-template-columns: auto auto;
-    border: thin solid black;
-
-}
-span{
-    display: grid;
-    grid-template-columns: 20px 1fr;
-    grid-template-rows: repeat(4,20px);
-}
-input[type=button]{
-    grid-column: 1/3;
-}
-h3,h5{
-    text-align: center;
+.formKredi {
+  padding: 1rem;
+  margin: auto;
+  width: 75vw;
+  display: grid;
+  gap: 1rem;
+  /* grid-template-columns: auto auto; */
+  border: 1px solid black;
 }
 
-form>label{
-    border-right: thin solid black;
-    border-bottom: thin solid black;
+.krediHesaplaSubmit {
+  grid-column: 1/3;
+  background-color: aquamarine;
 }
-form>span{
-    border-top: thin solid black;
-    border-bottom: thin solid black;
-    padding: 1rem;
+
+.title,
+krediBilgiler {
+  text-align: center;
+}
+
+form > label {
+  border-bottom: thin solid black;
+}
+form > span {
+  border-top: thin solid black;
+  border-bottom: thin solid black;
+  padding: 1rem;
 }

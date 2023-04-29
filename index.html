@@ -9,12 +9,12 @@
     <script src="main.js"></script>
   </head>
   <body>
-    <h3>KREDİ HESAPLAMA FORMU</h3>
-    <form action="#" id="formKredi">
-      <label for="txtKrediTutari">Çekilecek kredi tutarını giriniz:</label>
+    <h1 class="title">KREDİ HESAPLA</h1>
+    <form action="#" id="formKredi" class="formKredi">
+      <label for="txtKrediTutari">Çekilecek Kredi Tutarını Giriniz:</label>
 
       <input type="text" name="" id="txtKrediTutari" required />
-      <label for="faizOrani">Aylık Faiz Oranını giriniz (%):</label>
+      <label for="faizOrani">Aylık Faiz Oranını Giriniz (%):</label>
       <input
         id="faizOrani"
         placeholder="Aylık Faiz Oranını Giriniz(%).."
@@ -30,8 +30,9 @@
         type="button"
         value="Kredi Geri Ödeme Şartlarını Hesapla"
         onclick="krediHesapla();"
+        class="krediHesaplaSubmit"
       />
     </form>
-    <h5 id="sonuc"></h5>
+    <h5 class="krediBilgileri" id="krediBilgiler"></h5>
   </body>
 </html>
